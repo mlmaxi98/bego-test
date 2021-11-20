@@ -1,17 +1,32 @@
-import { Box, Grid } from '@mui/material';
-import { useState } from 'react';
+import { Box, Grid, Typography, SvgIcon } from '@mui/material';
 import { useTheme } from '@mui/material';
-
+import { Check, Clock, Flash, Menu } from '../icons'
 const Statistics = () => {
 
 
     const { palette } = useTheme()
     const { primary } = palette
     const statistics = [
-        { color: 'blue' },
-        { color: 'red' },
-        { color: 'green' },
-        { color: 'gray' },
+        {
+            name: 'Total projects',
+            total: 50,
+            icon: Menu
+        },
+        {
+            name: 'Completed',
+            total: 15,
+            icon: Check
+        },
+        {
+            name: 'In Progress',
+            total: 10,
+            icon: Flash
+        },
+        {
+            name: 'Delayed',
+            total: 2,
+            icon: Clock
+        },
     ]
     return (
         <Box sx={{
@@ -27,9 +42,10 @@ const Statistics = () => {
                     borderRadius: '0.5rem',
                 }}>
                 {
-                    statistics.map((statistic, i) =>
+                    statistics.map(({ name, total, icon }, i) =>
                         <Grid
                             item
+                            container
                             xs={6}
                             sx={{
                                 minHeight: '4.3rem',
@@ -41,13 +57,54 @@ const Statistics = () => {
                                 borderBottomLeftRadius: i === 2 && '0.5rem',
                                 borderBottomRightRadius: i === 3 && '0.5rem',
                             }}>
-                            {statistic.color}
+
+                            <Grid
+                                item xs={4}
+                                sx={{ display: 'flex' }}
+                                justifyContent="center"
+                                alignItems="center"
+                            >
+                                <img src={icon} />
+                            </Grid>
+                            <Grid
+                                item xs={8}
+                                container
+                                direction='column'
+                                justifyContent="center"
+                            >
+                                <Grid item>
+                                    <Typography
+                                        sx={{
+                                            color: '#C1C7D0',
+                                            fontSize: '18px',
+                                            fontWeight: 900,
+                                            letterSpacing: 0,
+                                            lineHeight: '26px',
+                                        }}>
+                                        {total}
+                                    </Typography>
+                                </Grid>
+                                <Grid item>
+                                    <Typography
+                                        sx={{
+                                            color: '#C1C7D0',
+                                            fontSize: '14px',
+                                            fontWeight: 300,
+                                            letterSpacing: 0,
+                                            lineHeight: '19px',
+                                        }}
+                                    >
+                                        {name}
+                                    </Typography>
+
+                                </Grid>
+                            </Grid>
                         </Grid>
                     )
                 }
             </Grid>
 
-        </Box>
+        </Box >
     );
 }
 export default Statistics
