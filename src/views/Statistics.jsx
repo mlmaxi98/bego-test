@@ -47,7 +47,11 @@ const Statistics = () => {
                 </Grid>
                 <Grid item xs={6}
                     container
-                    justifyContent="flex-end">
+                    justifyContent="flex-end"
+                    sx={{
+
+                    }}
+                >
                     <Box sx={{
                         minHeight: '24px',
                         minWidth: '53px',
@@ -76,12 +80,14 @@ const Statistics = () => {
             </Grid>
 
 
+
             <Grid
                 container
                 xs={12}
                 sx={{
-                    boxShadow: 'inset -2px -2px 4px 0 #040B11, inset 2px 2px 4px 0 #1C232A, 0 13px 9px 0 #000000',
+                    boxShadow: 'inset 2px 2px 6px 0 #1C232A, inset -2px -2px 6px 0 #040B11, 0 13px 9px 0 #000000',
                     borderRadius: '0.5rem',
+                    border: '1px solid #10161C ',
                 }}>
                 {
                     statistics.map(({ name, total, icon }, i) =>
@@ -145,8 +151,7 @@ const Statistics = () => {
                     )
                 }
             </Grid>
-
-        </Box >
+        </Box>
     );
 }
 export default Statistics

@@ -32,7 +32,8 @@ const Task = ({ task }) => {
                                     paddingRight: i == 0 && 0.5,
                                     paddingLeft: i == 1 && 0.5,
                                     minHeight: '6.625rem',
-                                    zIndex: 99999
+                                    zIndex: 99999,
+                                    cursor: 'grab'
                                 }}>
                                 <Box
                                     sx={{

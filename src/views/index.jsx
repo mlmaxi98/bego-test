@@ -20,7 +20,7 @@ const Home = () => {
                 minHeight: '100vh',
                 backgroundColor: '#040B11',
             }}>
-            <Container maxWidth='sm'>
+            <Container maxWidth='md'>
                 <Navbar />
                 <Tabs elements={tasks} initial={tasks[0].value} />
                 <Tasks />

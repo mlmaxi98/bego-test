@@ -8,7 +8,7 @@ const CustomTabs = ({
     elements, initial, fontSize, fontWeight, type }) => {
 
     const [value, setValue] = useState(initial);
-    const handleChange = (event, newValue) => {
+    const handleChange = (_, newValue) => {
         setValue(newValue);
     };
 
@@ -61,6 +61,10 @@ const CustomTabs = ({
                                         && tab.value !== 'week'
                                     ) && '2.5%',
                                     marginRight: type === 'graph' && '2.5%',
+                                    fontSize: '14px',
+                                    fontWeight: 900,
+                                    letterSpacing: 0,
+                                    lineHeight: '26px',
                                 }}
                             />
 
