@@ -1,10 +1,10 @@
-import { Box, Grid, Typography, IconButton } from "@mui/material"
+import { Box, Grid, Typography, IconButton, Button } from "@mui/material"
 import { Back, Notification } from '../icons'
 const Navbar = () => {
     return (
         <Box sx={{
             width: '100%',
-            pt: 5,
+            pt: 10,
         }}>
             <Grid
                 container
@@ -45,6 +45,14 @@ const Navbar = () => {
                     </IconButton>
                 </Grid>
             </Grid>
+            <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '43px' }}>
+                <Button color='primary' sx={{
+                    fontSize: '1rem',
+                    lineHeight: '21px',
+                    letterSpacing: 0,
+                    fontWeight: 900,
+                }}>CREATE +</Button>
+            </Box>
         </Box>
     )
 }
