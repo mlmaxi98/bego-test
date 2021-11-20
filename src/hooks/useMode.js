@@ -59,7 +59,7 @@ const useMode = () => {
                 defaultProps: {
                     disableRipple: true
                 }
-            }
+            },
         },
     }));
 

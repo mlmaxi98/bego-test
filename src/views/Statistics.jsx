@@ -1,6 +1,6 @@
 import { Box, Grid, Typography, SvgIcon } from '@mui/material';
 import { useTheme } from '@mui/material';
-import { Check, Clock, Flash, Menu } from '../icons'
+import { Check, Clock, Flash, Menu, Download, Chevron } from '../icons'
 const Statistics = () => {
 
 
@@ -34,6 +34,48 @@ const Statistics = () => {
             py: 5,
 
         }}>
+            <Grid container sx={{ marginBottom: '13px' }} alignItems="center">
+                <Grid item xs={6}>
+                    <Typography sx={{
+                        fontSize: '16px',
+                        fontWeight: 900,
+                        letterSpacing: 0,
+                        lineHeight: '26px',
+                    }}>
+                        Statistics
+                    </Typography>
+                </Grid>
+                <Grid item xs={6}
+                    container
+                    justifyContent="flex-end">
+                    <Box sx={{
+                        minHeight: '24px',
+                        minWidth: '53px',
+                        border: '1px solid #1C232A',
+                        borderRadius: '4px',
+                        backgroundColor: '#10161C',
+                        boxShadow: 'inset -2px -2px 4px 0 #040B11, inset 2px 2px 4px 0 #1C232A'
+                    }}>
+                        <Grid container>
+                            <Grid item xs={9} sx={{ display: 'flex', px: 1 }}
+                                justifyContent="center"
+                                alignItems="center">
+                                <img src={Download} />
+                            </Grid>
+                            <Grid item xs={3} sx={{ display: 'flex', borderLeft: '1px solid #494C50', px: 1 }}
+                                justifyContent="center"
+                                alignItems="center">
+                                <img src={Chevron} />
+                            </Grid>
+
+                        </Grid>
+
+                    </Box>
+
+                </Grid>
+            </Grid>
+
+
             <Grid
                 container
                 xs={12}
