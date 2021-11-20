@@ -9,8 +9,8 @@ const Graphic = () => {
         40,//2
         40,//2
         35,//3
-        30,//4
-        31,//4
+        33,//4
+        34,//4
         44,//5
         46,//5
         40,//6
@@ -39,14 +39,11 @@ const Graphic = () => {
     }
 
     const tooltipLine = {
-        id: 'tooltipLine',
         beforeDraw: chart => {
 
             const ctx = chart.ctx;
-
             let _stroke = ctx.stroke;
             ctx.stroke = function () {
-
                 ctx.save();
                 ctx.shadowColor = 'yellow';
                 ctx.shadowBlur = 50;
@@ -57,11 +54,8 @@ const Graphic = () => {
                 _stroke.apply(this, arguments)
                 ctx.restore();
             }
-
             if (chart.tooltip._active && chart.tooltip._active.length) {
-
                 const activePoint = chart.tooltip._active[0]
-
                 ctx.beginPath()
                 ctx.moveTo(activePoint.element.x, activePoint.element.y)
                 ctx.lineTo(activePoint.element.x, chart.chartArea.bottom)
@@ -90,8 +84,6 @@ const Graphic = () => {
                             display: false
                         },
                     },
-
-
                 },
                 responsive: true,
                 maintainAspectRatio: false,

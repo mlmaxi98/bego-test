@@ -29,7 +29,8 @@ const useMode = () => {
             },
         },
         typography: {
-            fontFamily: 'Avenir LT Std'
+            fontFamily: 'Avenir LT Std',
+            fontWeightBold: 700
         },
         components: {
             MuiCssBaseline: {
@@ -54,15 +55,11 @@ const useMode = () => {
                     }
                 `,
             },
-            MuiOutlinedInput: {
-                styleOverrides: {
-                    input: {
-                        '&:-webkit-autofill': {
-                            'WebkitBoxShadow': `0 0 0 100px ${colorInput} inset`,
-                        }
-                    }
+            MuiButtonBase: {
+                defaultProps: {
+                    disableRipple: true
                 }
-            },
+            }
         },
     });
 

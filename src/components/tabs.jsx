@@ -4,22 +4,19 @@ import Box from '@mui/material/Box';
 import { useState } from 'react';
 import { useTheme } from '@mui/material';
 
-const Navbar = () => {
-    const [value, setValue] = useState('one');
+const CustomTabs = ({
+    elements, initial, fontSize, fontWeight, type }) => {
+
+    const [value, setValue] = useState(initial);
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
 
     const { palette } = useTheme()
     const { primary } = palette
-    const tabs = [
-        { name: 'All', value: 'one' },
-        { name: 'In Progress', value: 'two' },
-        { name: 'Started', value: 'three' },
-        { name: 'Completed', value: 'four' },
-    ]
+
     return (
-        <Box sx={{ width: '100%' }}>
+        <Box sx={{ width: '100%', py: 5 }}>
             <Tabs
                 value={value}
                 onChange={handleChange}
@@ -27,18 +24,20 @@ const Navbar = () => {
                 indicatorColor="primary"
                 TabIndicatorProps={{
                     style: {
-                        width: 35,
-                        borderTop: `1px solid ${primary.main}`,
+                        width: 30,
+                        height: 3,
+                        borderTop: `2px solid ${primary.main}`,
                         transform: "translateY(-10px)",
                         alignSelf: "flex-start",
-                        marginLeft: "5px",
+                        marginLeft: "1rem",
+                        borderRadius: '5px',
                     },
                 }}
                 indicatorColor='primary.main'
                 variant='fullWidth'
             >
                 {
-                    tabs.map(tab => {
+                    elements.map(tab => {
                         return (
                             <Tab
                                 key={tab.name}
@@ -49,7 +48,19 @@ const Navbar = () => {
                                     color: value === tab.value && palette.primary.main,
                                     textTransform: 'none',
                                     textAlign: 'left',
-                                    minWidth: tab.value === 'two' && '30%'
+                                    minWidth: (
+                                        tab.value === 'inProgress'
+                                        || tab.value === 'completed'
+                                    ) && '30%',
+                                    fontSize: fontSize && `${fontSize}rem`,
+                                    fontWeight: fontWeight && fontWeight,
+                                    flexDirection: 'row',
+                                    justifyContent: 'flex-start',
+                                    marginLeft: (
+                                        type === 'graph'
+                                        && tab.value !== 'week'
+                                    ) && '2.5%',
+                                    marginRight: type === 'graph' && '2.5%',
                                 }}
                             />
 
@@ -60,4 +71,4 @@ const Navbar = () => {
         </Box>
     );
 }
-export default Navbar
+export default CustomTabs
