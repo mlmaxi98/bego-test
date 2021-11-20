@@ -1650,7 +1650,7 @@
     "prop-types" "^15.7.2"
     "react-is" "^17.0.2"
 
-"@mui/icons-material@^5.0.0":
+"@mui/icons-material@^5.0.0", "@mui/icons-material@^5.1.1":
   "integrity" "sha512-tLM1/QhVAgcetEscZa8BlM1IRRaoNxjhFzQOIs5wAuuVhHSrB8zZCKugpZVIZ1nKyQqLgVEa9TbtWpo5jLrnRQ=="
   "resolved" "https://registry.npmjs.org/@mui/icons-material/-/icons-material-5.1.1.tgz"
   "version" "5.1.1"
@@ -1712,7 +1712,7 @@
     "@emotion/cache" "^11.6.0"
     "prop-types" "^15.7.2"
 
-"@mui/styles@^5.0.0":
+"@mui/styles@^5.0.0", "@mui/styles@^5.1.1":
   "integrity" "sha512-dM1H5sGLB+aXPOi1OAd+riXX/+RxEC4hOcV9INcbrabbS3b4WBU24lW777ixka3iFwg9HH/FcVCp7M6U5WEGJQ=="
   "resolved" "https://registry.npmjs.org/@mui/styles/-/styles-5.1.1.tgz"
   "version" "5.1.1"
@@ -5587,14 +5587,6 @@
     "flatted" "^3.1.0"
     "rimraf" "^3.0.2"
 
-"flatlist-react@^1.5.0":
-  "integrity" "sha512-Ux0Pnp679sNcq+v0o+mU5pJgPBFdaOWDzxGknftZw1G4uBrwyAFRJN++gyveiEXc5bPvRL0wsE2B6OYSmdUmKg=="
-  "resolved" "https://registry.npmjs.org/flatlist-react/-/flatlist-react-1.5.0.tgz"
-  "version" "1.5.0"
-  dependencies:
-    "prop-types" "^15.7.2"
-    "warning" "^4.0.3"
-
 "flatted@^3.1.0":
   "integrity" "sha512-8/sOawo8tJ4QOBX8YlQBMxL8+RLZfxMQOif9o0KUKTNTjMYElWPE0r/m5VNFxTRd0NSw8qSy8dajrwX4RYI1Hw=="
   "resolved" "https://registry.npmjs.org/flatted/-/flatted-3.2.4.tgz"
@@ -7729,7 +7721,7 @@
   "resolved" "https://registry.npmjs.org/loglevel/-/loglevel-1.8.0.tgz"
   "version" "1.8.0"
 
-"loose-envify@^1.0.0", "loose-envify@^1.1.0", "loose-envify@^1.4.0":
+"loose-envify@^1.1.0", "loose-envify@^1.4.0":
   "integrity" "sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q=="
   "resolved" "https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz"
   "version" "1.4.0"
@@ -9811,7 +9803,7 @@
     "strip-ansi" "6.0.0"
     "text-table" "0.2.0"
 
-"react-dom@*", "react-dom@^17.0.1", "react-dom@^17.0.2", "react-dom@>=16.6.0", "react-dom@>=16.8 || ^17.0.0", "react-dom@>=16.8.0":
+"react-dom@*", "react-dom@^17.0.1", "react-dom@^17.0.2", "react-dom@>=16.6.0", "react-dom@>=16.8 || ^17.0.0":
   "integrity" "sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-17.0.2.tgz"
   "version" "17.0.2"
@@ -11862,13 +11854,6 @@
   "version" "1.0.8"
   dependencies:
     "makeerror" "1.0.12"
-
-"warning@^4.0.3":
-  "integrity" "sha512-rpJyN222KWIvHJ/F53XSZv0Zl/accqHR8et1kpaMTD/fLCRxtV8iX8czMzY7sVZupTI3zcUTg8eycS2kNF9l6w=="
-  "resolved" "https://registry.npmjs.org/warning/-/warning-4.0.3.tgz"
-  "version" "4.0.3"
-  dependencies:
-    "loose-envify" "^1.0.0"
 
 "watchpack-chokidar2@^2.0.1":
   "integrity" "sha512-nCFfBIPKr5Sh61s4LPpy1Wtfi0HE8isJ3d2Yb5/Ppw2P2B/3eVSEBjKfN0fmHJSK14+31KwMKmcrzs2GM4P0Ww=="
