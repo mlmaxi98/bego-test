@@ -3,6 +3,7 @@ import Navbar from './Navbar'
 import Graphics from './Graphics';
 import Tabs from '../components/tabs';
 import Statistics from './Statistics';
+import Tasks from './Tasks';
 
 const Home = () => {
     const tasks = [
@@ -22,6 +23,7 @@ const Home = () => {
             <Container maxWidth='sm'>
                 <Navbar />
                 <Tabs elements={tasks} initial={tasks[0].value} />
+                <Tasks />
                 <Statistics />
                 <Graphics />
             </Container>

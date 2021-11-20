@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { createTheme } from '@mui/material';
+import { createTheme, responsiveFontSizes } from '@mui/material';
 import { grey, yellow } from '@mui/material/colors';
 
 const useMode = () => {
@@ -8,7 +8,7 @@ const useMode = () => {
     const colorBar = mode ? grey[500] : yellow[500]
     const colorInput = mode ? grey[900] : yellow[50]
     const colorBarHover = mode ? grey[700] : yellow[700]
-    const theme = createTheme({
+    const theme = responsiveFontSizes(createTheme({
         palette: {
             mode: mode ? 'dark' : 'light',
             primary: {
@@ -61,7 +61,7 @@ const useMode = () => {
                 }
             }
         },
-    });
+    }));
 
     return {
         mode,

@@ -41,7 +41,7 @@ const Graphic = () => {
     const tooltipLine = {
         beforeDraw: chart => {
 
-            const ctx = chart.ctx;
+            const { ctx } = chart;
             let _stroke = ctx.stroke;
             ctx.stroke = function () {
                 ctx.save();

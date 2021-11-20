@@ -47,7 +47,7 @@ const Graphics = () => {
                     item
                     container
                     justifyContent="space-between"
-                    sx={{ marginTop: '-3.5rem' }}
+                    sx={{ marginTop: '-2.25rem', backgroundColor: '#10161C', }}
                 >
                     {
                         months.map(month =>
@@ -55,7 +55,7 @@ const Graphics = () => {
                                 key={month}
                                 item
                                 justifyContent="center"
-                                sx={{ backgroundColor: '#10161C', }}
+                                xs='auto'
                             >
 
                                 <Typography
