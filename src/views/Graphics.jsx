@@ -6,7 +6,6 @@ import Graphic from '../components/graphic';
 const Graphics = () => {
 
     const Months = styled(Typography)({
-        userSelect: 'none',
         color: '#89898A',
         fontSize: '16px',
         fontWeight: 900,

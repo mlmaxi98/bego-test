@@ -89,6 +89,7 @@ const useMode = () => {
                         -webkit-scroll-behavior: smooth;
                         scrollbar-color: ${colorBar} transparent;
                         scrollbar-width: thin;
+                        user-select: none;
                     }
                     ::-webkit-scrollbar {
                         width: 7.5px;
