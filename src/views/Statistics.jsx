@@ -51,7 +51,6 @@ const Statistics = () => {
 
             <Grid
                 container
-                xs={12}
                 sx={{
                     boxShadow: 'inset 2px 2px 6px 0 #1C232A, inset -2px -2px 6px 0 #040B11, 0 13px 9px 0 #000000',
                     borderRadius: '0.5rem',
@@ -103,14 +102,11 @@ const Statistics = () => {
                                 </Grid>
                                 <Grid item>
                                     <Typography
+                                        variant="progress"
                                         sx={{
-                                            color: '#C1C7D0',
                                             fontSize: '14px',
-                                            fontWeight: 300,
-                                            letterSpacing: 0,
                                             lineHeight: '19px',
-                                        }}
-                                    >
+                                        }}>
                                         {name}
                                     </Typography>
 

@@ -1,4 +1,13 @@
 import { Check, Clock, Flash, Menu } from '../icons'
+
+export const initialTab = [
+    { name: 'All', value: 'all' },
+    { name: 'In Progress', value: 'inProgress' },
+    { name: 'Started', value: 'started' },
+    { name: 'Completed', value: 'completed' },
+]
+
+
 export const statistics = [
     { name: 'Total projects', total: 50, icon: Menu },
     { name: 'Completed', total: 15, icon: Check },
@@ -97,3 +106,4 @@ export const options = {
 
     }
 }
+

@@ -1,9 +1,21 @@
-import { Box, Grid, Typography } from '@mui/material/';
+import { Box, Grid, Typography, styled } from '@mui/material/';
+import { timeLapse, months } from '../utils/Consts'
 import Tabs from '../components/tabs';
 import Graphic from '../components/graphic';
-import { timeLapse, months } from '../utils/Consts'
 
 const Graphics = () => {
+
+    const Months = styled(Typography)({
+        userSelect: 'none',
+        color: '#89898A',
+        fontSize: '16px',
+        fontWeight: 900,
+        letterSpacing: 0,
+        lineHeight: '22px',
+        '&:hover': {
+            color: '#FFFFFF'
+        }
+    })
 
     return (
         <>
@@ -46,7 +58,7 @@ const Graphics = () => {
                         item
                         container
                         justifyContent="space-between"
-                        sx={{ marginTop: '-2.5rem' }}>
+                        sx={{ marginTop: '-2.5rem', zIndex: 99999 }}>
                         {
                             months.map((month, k) =>
                                 <Grid
@@ -55,11 +67,9 @@ const Graphics = () => {
                                     justifyContent="center"
                                     xs='auto'
                                 >
-                                    <Typography
-                                        textAlign="center"
-                                        variant='graphs'>
+                                    <Months>
                                         {month}
-                                    </Typography>
+                                    </Months>
                                 </Grid>)
                         }
                     </Grid>

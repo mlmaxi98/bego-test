@@ -1,6 +1,7 @@
-import { Box, Grid, Typography, IconButton, Button } from "@mui/material"
+import { Box, Grid, Typography, IconButton, Button, useTheme } from "@mui/material"
 import { Back, Notification } from '../icons'
 const Navbar = () => {
+    const { typography } = useTheme()
     return (
         <Box sx={{
             width: '100%',
@@ -8,7 +9,6 @@ const Navbar = () => {
         }}>
             <Grid
                 container
-                xs={12}
                 direction="row"
                 justifyContent="space-between"
             >
@@ -26,12 +26,7 @@ const Navbar = () => {
                     sx={{ display: 'flex' }}
                     alignItems="center"
                     justifyContent="center">
-                    <Typography alignText="center" sx={{
-                        fontSize: '18px',
-                        fontWeight: 900,
-                        letterSpacing: 0,
-                        lineHeight: '26px',
-                    }}>
+                    <Typography variant="tabGraph">
                         Tasks
                     </Typography>
                 </Grid>
@@ -47,10 +42,7 @@ const Navbar = () => {
             </Grid>
             <Box sx={{ display: 'flex', justifyContent: 'flex-end', marginTop: '43px' }}>
                 <Button color='primary' sx={{
-                    fontSize: '1rem',
-                    lineHeight: '21px',
-                    letterSpacing: 0,
-                    fontWeight: 900,
+                    ...typography.graphs
                 }}>CREATE +</Button>
             </Box>
         </Box>

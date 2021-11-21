@@ -19,7 +19,6 @@ const CustomTabs = ({ elements, initial, type }) => {
             <Tabs
                 value={value}
                 onChange={handleChange}
-                textColor="white"
                 TabIndicatorProps={{
                     style: {
                         width: 30,
@@ -31,7 +30,7 @@ const CustomTabs = ({ elements, initial, type }) => {
                         borderRadius: '5px',
                     },
                 }}
-                indicatorColor='primary.main'
+                indicatorColor='primary'
                 variant='fullWidth'
             >
                 {

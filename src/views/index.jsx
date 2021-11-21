@@ -1,18 +1,11 @@
 import { Box, Container } from '@mui/material/';
+import { initialTab } from '../utils/Consts'
 import Navbar from './Navbar'
 import Graphics from './Graphics';
 import Tabs from '../components/tabs';
 import Statistics from './Statistics';
 import Tasks from './Tasks';
-
 const Home = () => {
-    const tasks = [
-        { name: 'All', value: 'all' },
-        { name: 'In Progress', value: 'inProgress' },
-        { name: 'Started', value: 'started' },
-        { name: 'Completed', value: 'completed' },
-    ]
-
 
     return (
         <Box component='section'
@@ -23,8 +16,8 @@ const Home = () => {
             <Container maxWidth='md'>
                 <Navbar />
                 <Tabs
-                    elements={tasks}
-                    initial={tasks[0].value}
+                    elements={initialTab}
+                    initial={initialTab[0].value}
                 />
                 <Tasks />
                 <Statistics />
@@ -32,7 +25,6 @@ const Home = () => {
             </Container>
         </Box>
     )
-
 }
 
 export default Home

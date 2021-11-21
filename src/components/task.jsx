@@ -19,13 +19,12 @@ const Task = ({ task }) => {
 
     return (
         <Box sx={{ minHeight: '7.625rem' }}>
-            <Grid
-                container
-                xs={12}>
+            <Grid container>
                 {
                     tasks.map(({ order, name, days, progress }, i) => {
                         return (
                             <Grid
+                                key={name}
                                 item
                                 xs={6}
                                 sx={{
@@ -43,7 +42,7 @@ const Task = ({ task }) => {
                                         paddingBottom: 1,
                                         marginBottom: 2,
                                     }}>
-                                    <Grid container xs={12}>
+                                    <Grid container>
                                         <Grid item xs={12}>
                                             <Typography variant='tabInit'>
                                                 Order {order}
@@ -59,7 +58,7 @@ const Task = ({ task }) => {
                                         </Grid>
                                     </Grid>
                                     <Grid
-                                        container xs={12}
+                                        container
                                         sx={{ marginTop: '5px' }}
                                         alignItems="center">
                                         <Grid item xs >
