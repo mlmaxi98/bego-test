@@ -28,7 +28,7 @@ const useMode = () => {
             },
         },
         typography: {
-            fontFamily: 'Avenir LT Std',
+            fontFamily: ['"Avenir LT Std"', 'sans-serif'].join(','),
             fontWeightBold: 700
         },
         components: {

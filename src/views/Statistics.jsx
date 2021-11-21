@@ -1,34 +1,12 @@
 import { Box, Grid, Typography } from '@mui/material';
-import { Check, Clock, Flash, Menu, Download, Chevron } from '../icons'
+import { Download, Chevron } from '../icons'
+import { statistics } from './Consts'
 const Statistics = () => {
 
-    const statistics = [
-        {
-            name: 'Total projects',
-            total: 50,
-            icon: Menu
-        },
-        {
-            name: 'Completed',
-            total: 15,
-            icon: Check
-        },
-        {
-            name: 'In Progress',
-            total: 10,
-            icon: Flash
-        },
-        {
-            name: 'Delayed',
-            total: 2,
-            icon: Clock
-        },
-    ]
     return (
         <Box sx={{
             width: '100%',
             py: 5,
-
         }}>
             <Grid container sx={{ marginBottom: '13px' }} alignItems="center">
                 <Grid item xs={6}>
