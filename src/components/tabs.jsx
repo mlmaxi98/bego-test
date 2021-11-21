@@ -4,16 +4,15 @@ import Box from '@mui/material/Box';
 import { useState } from 'react';
 import { useTheme } from '@mui/material';
 
-const CustomTabs = ({
-    elements, initial, size, weight, type }) => {
+const CustomTabs = ({ elements, initial, type }) => {
 
+    const { palette, typography } = useTheme()
+    const { primary } = palette
     const [value, setValue] = useState(initial);
     const handleChange = (_, newValue) => {
         setValue(newValue);
     };
-
-    const { palette } = useTheme()
-    const { primary } = palette
+    const variant = type === 'graph' ? typography.tabGraph : typography.tabInit
 
     return (
         <Box sx={{ width: '100%', py: 5 }}>
@@ -42,7 +41,6 @@ const CustomTabs = ({
                                 key={tab.name}
                                 value={tab.value}
                                 label={tab.name}
-
                                 sx={{
                                     minWidth: (
                                         tab.value === 'inProgress'
@@ -58,10 +56,7 @@ const CustomTabs = ({
                                     marginRight: type === 'graph' && '2.5%',
                                     textTransform: 'none',
                                     textAlign: 'left',
-                                    fontSize: size && `${size}px`,
-                                    fontWeight: weight,
-                                    letterSpacing: 0,
-                                    lineHeight: '26px',
+                                    ...variant
                                 }}
                             />
 

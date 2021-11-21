@@ -1,18 +1,9 @@
 import { Box, Grid, Typography } from '@mui/material/';
 import Tabs from '../components/tabs';
 import Graphic from '../components/graphic';
+import { timeLapse, months } from './Consts'
 
 const Graphics = () => {
-    const timeLapse = [
-        { name: 'Day', value: 'day' },
-        { name: 'Week', value: 'week' },
-        { name: 'Month', value: 'month' },
-        { name: 'Year', value: 'year' },
-    ]
-
-    const months = ["", "Jan", "", "Jul", "", "Aug", "", "Sep", "", "Oct", "", "Nov", "",]
-
-    //const days = ["", "Mon", "", "Tue", "", "Wed", "", "Thu", "", "Fri", "", "Sat", "", "Sun", "",]
 
     return (
         <>
@@ -31,8 +22,6 @@ const Graphics = () => {
                             type="graph"
                             elements={timeLapse}
                             initial={timeLapse[2].value}
-                            size={18}
-                            weight={900}
                         />
                     </Grid>
                     <Grid item container xs={12} sx={{ marginTop: '1.5rem' }} justifyContent="center" alignItems="center">
@@ -46,32 +35,23 @@ const Graphics = () => {
                                 fontSize: '22px',
                                 letterSpacing: 0,
                                 lineHeight: '26px',
-                            }}>
+                            }}
+                            >
                                 $
                             </Typography>
                         </Grid>
                         <Grid item>
-
-                            <Typography sx={{
-                                fontSize: '45px',
-                                fontWeight: 900,
-                                letterSpacing: 0,
-                                lineHeight: '61px',
-                            }}
-                            >
+                            <Typography variant='money'>
                                 13,543
                             </Typography>
                         </Grid>
                     </Grid>
-                    <Grid item xs={12} >
-                        <Graphic />
-                    </Grid>
+                    <Grid item xs={12}> <Graphic /> </Grid>
                     <Grid
                         item
                         container
                         justifyContent="space-between"
-                        sx={{ marginTop: '-2.5rem' }}
-                    >
+                        sx={{ marginTop: '-2.5rem' }}>
                         {
                             months.map(month =>
                                 <Grid
@@ -80,10 +60,9 @@ const Graphics = () => {
                                     justifyContent="center"
                                     xs='auto'
                                 >
-
                                     <Typography
                                         textAlign="center"
-                                        fontWeight='fontWeightBold'>
+                                        fontWeight={900}>
                                         {month}
                                     </Typography>
                                 </Grid>)

@@ -43,60 +43,47 @@ const Task = ({ task }) => {
                                         paddingBottom: 1,
                                         marginBottom: 2,
                                     }}>
-                                    <Typography sx={{
-                                        fontSize: "14px",
-                                        fontWeight: 900,
-                                        letterSpacing: 0,
-                                        lineHeight: '16px'
-                                    }}>
-                                        Order {order}
-                                    </Typography>
-                                    <Typography sx={{
-                                        color: '#C1C7D0',
-                                        fontSize: "12px",
-                                        fontWeight: 300,
-                                        letterSpacing: 0,
-                                        lineHeight: '26px',
-                                    }}>
-                                        {name}
-                                    </Typography>
-                                    <Grid container sx={{ marginTop: '10px' }}>
+                                    <Grid container xs={12}>
+                                        <Grid item xs={12}>
+                                            <Typography variant='tabInit'>
+                                                Order {order}
+                                            </Typography>
+                                        </Grid>
+                                        <Grid item xs={12}>
+                                            <Typography
+                                                sx={{ lineHeight: '26px', }}
+                                                variant='cardSubtitle'
+                                            >
+                                                {name}
+                                            </Typography>
+                                        </Grid>
+                                    </Grid>
+                                    <Grid
+                                        container xs={12}
+                                        sx={{ marginTop: '5px' }}
+                                        alignItems="center">
                                         <Grid item xs >
-                                            <Typography sx={{
-                                                color: '#C1C7D0',
-                                                fontSize: "12px",
-                                                fontWeight: 300,
-                                                letterSpacing: 0,
-                                                lineHeight: '16px'
-                                            }}>
+                                            <Typography
+                                                variant='progress'
+                                                sx={{ lineHeight: '16px', fontSize: '12px' }}>
                                                 Progress
                                             </Typography>
                                         </Grid>
                                         <Grid item xs>
-                                            <Typography textAlign="right" sx={{
-                                                color: '#C1C7D0',
-                                                fontSize: "10px",
-                                                fontWeight: 300,
-                                                letterSpacing: 0,
-                                                lineHeight: '14px'
-                                            }}>
+                                            <Typography
+                                                component='p'
+                                                variant='progress'
+                                                textAlign="right">
                                                 {progress}%
                                             </Typography>
                                         </Grid>
                                     </Grid>
                                     <Linear variant="determinate" value={progress} />
-                                    <Typography textAlign="right" sx={{
-                                        color: '#C1C7D0',
-                                        fontSize: "10px",
-                                        fontWeight: 300,
-                                        letterSpacing: 0,
-                                        lineHeight: '14px',
-                                        textAling: 'right',
-                                    }}>
+                                    <Typography component='p' textAlign="right" variant='progress' >
                                         {days} {days > 1 ? 'days' : 'day'} left
                                     </Typography>
                                 </Box>
-                            </Grid >
+                            </Grid>
                         )
                     })
                 }

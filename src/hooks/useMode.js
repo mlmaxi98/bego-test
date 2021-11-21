@@ -7,6 +7,7 @@ const useMode = () => {
     const toggleMode = () => setMode(!mode)
     const colorBar = mode ? grey[500] : yellow[500]
     const colorBarHover = mode ? grey[700] : yellow[700]
+
     const theme = responsiveFontSizes(createTheme({
         palette: {
             mode: mode ? 'dark' : 'light',
@@ -29,7 +30,43 @@ const useMode = () => {
         },
         typography: {
             fontFamily: ['"Avenir LT Std"', 'sans-serif'].join(','),
-            fontWeightBold: 700
+            tabInit: {
+                fontSize: '14px',
+                lineHeight: '26px',
+                fontWeight: 900,
+                letterSpacing: 0,
+            },
+            tabGraph: {
+                fontSize: `18px`,
+                lineHeight: '25px',
+                fontWeight: 900,
+                letterSpacing: 0,
+            },
+            money: {
+                fontSize: '45px',
+                lineHeight: '61px',
+                fontWeight: 900,
+                letterSpacing: 0,
+            },
+            cardSubtitle: {
+                color: '#C1C7D0',
+                fontSize: "12px",
+                fontWeight: 300,
+                letterSpacing: 0,
+            },
+            progress: {
+                color: '#C1C7D0',
+                fontSize: "10px",
+                lineHeight: '14px',
+                fontWeight: 300,
+                letterSpacing: 0,
+            },
+            five: {
+                fontSize: '14px',
+                fontWeight: 300,
+                letterSpacing: 0,
+                lineHeight: '19px',
+            }
         },
         components: {
             MuiCssBaseline: {

@@ -1,23 +1,10 @@
 import { useTheme } from '@mui/material/';
 import { Line } from 'react-chartjs-2'
-
+import { points, options } from '../views/Consts'
 const Graphic = () => {
     const { palette } = useTheme()
     const { primary } = palette
-    const points = [
-        35,//1
-        40,//2
-        40,//2
-        35,//3
-        33,//4
-        34,//4
-        44,//5
-        46,//5
-        40,//6
-        35,//7
-        35,//7
-        45,//8
-    ].map(n => n - 25)
+
     const data = () => {
 
         return {
@@ -70,38 +57,7 @@ const Graphic = () => {
     return (
         <Line
             data={data}
-            options={{
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        grid: {
-                            display: false
-                        },
-                        display: false,
-                    },
-                    x: {
-                        grid: {
-                            display: false
-                        },
-                    },
-                },
-                responsive: true,
-                maintainAspectRatio: false,
-                layout: {
-                    padding: {
-                        bottom: 10,
-                    },
-                },
-                plugins: {
-                    tooltip: {
-                        enabled: false
-                    },
-                    legend: {
-                        display: false,
-                    },
-
-                }
-            }}
+            options={options}
             plugins={[tooltipLine, {
                 borderColor: 'red',
                 borderWidth: 2,

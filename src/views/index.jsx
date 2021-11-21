@@ -25,8 +25,6 @@ const Home = () => {
                 <Tabs
                     elements={tasks}
                     initial={tasks[0].value}
-                    size={14}
-                    weight={900}
                 />
                 <Tasks />
                 <Statistics />
