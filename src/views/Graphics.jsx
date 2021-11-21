@@ -1,7 +1,7 @@
 import { Box, Grid, Typography } from '@mui/material/';
 import Tabs from '../components/tabs';
 import Graphic from '../components/graphic';
-import { timeLapse, months } from './Consts'
+import { timeLapse, months } from '../utils/Consts'
 
 const Graphics = () => {
 
@@ -31,12 +31,7 @@ const Graphics = () => {
                             marginTop: '0.5rem',
                             marginRight: '0.5rem',
                         }}>
-                            <Typography sx={{
-                                fontSize: '22px',
-                                letterSpacing: 0,
-                                lineHeight: '26px',
-                            }}
-                            >
+                            <Typography variant='dollar'>
                                 $
                             </Typography>
                         </Grid>
@@ -53,16 +48,16 @@ const Graphics = () => {
                         justifyContent="space-between"
                         sx={{ marginTop: '-2.5rem' }}>
                         {
-                            months.map(month =>
+                            months.map((month, k) =>
                                 <Grid
-                                    key={month}
+                                    key={k + month}
                                     item
                                     justifyContent="center"
                                     xs='auto'
                                 >
                                     <Typography
                                         textAlign="center"
-                                        fontWeight={900}>
+                                        variant='graphs'>
                                         {month}
                                     </Typography>
                                 </Grid>)

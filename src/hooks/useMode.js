@@ -66,7 +66,18 @@ const useMode = () => {
                 fontWeight: 300,
                 letterSpacing: 0,
                 lineHeight: '19px',
-            }
+            },
+            graphs: {
+                fontSize: '16px',
+                fontWeight: 900,
+                letterSpacing: 0,
+                lineHeight: '22px'
+            },
+            dollar: {
+                fontSize: '22px',
+                letterSpacing: 0,
+                lineHeight: '26px'
+            },
         },
         components: {
             MuiCssBaseline: {

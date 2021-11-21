@@ -1,6 +1,6 @@
 import { useTheme } from '@mui/material/';
 import { Line } from 'react-chartjs-2'
-import { points, options } from '../views/Consts'
+import { points, options } from '../utils/Consts'
 const Graphic = () => {
     const { palette } = useTheme()
     const { primary } = palette

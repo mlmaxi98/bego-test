@@ -1,7 +1,7 @@
 import { Box, Grid, Typography } from "@mui/material"
 import Carousel from 'react-material-ui-carousel'
 import Task from '../components/task'
-import { tasks } from './Consts'
+import { tasks } from '../utils/Consts'
 const Tasks = () => {
 
     return (
@@ -27,7 +27,7 @@ const Tasks = () => {
                 navButtonsAlwaysInvisible={true}
             >
                 {
-                    tasks.map(task => <Task task={task} key={task.name} />)
+                    tasks.map((task, t) => <Task task={task} key={task.name + t} />)
                 }
             </Carousel>
         </Box >

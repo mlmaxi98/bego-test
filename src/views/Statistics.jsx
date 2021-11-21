@@ -1,6 +1,6 @@
 import { Box, Grid, Typography } from '@mui/material';
 import { Download, Chevron } from '../icons'
-import { statistics } from './Consts'
+import { statistics } from '../utils/Consts'
 const Statistics = () => {
 
     return (
@@ -23,7 +23,6 @@ const Statistics = () => {
                     container
                     justifyContent="flex-end"
                     sx={{
-
                     }}
                 >
                     <Box sx={{
@@ -45,15 +44,10 @@ const Statistics = () => {
                                 alignItems="center">
                                 <img src={Chevron} alt='chevron' />
                             </Grid>
-
                         </Grid>
-
                     </Box>
-
                 </Grid>
             </Grid>
-
-
 
             <Grid
                 container
@@ -69,6 +63,7 @@ const Statistics = () => {
                             item
                             container
                             xs={6}
+                            key={name + total}
                             sx={{
                                 minHeight: '4.3rem',
                                 backgroundColor: '#10161C',
