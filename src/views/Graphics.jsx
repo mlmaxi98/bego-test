@@ -31,8 +31,9 @@ const Graphics = () => {
                             type="graph"
                             elements={timeLapse}
                             initial={timeLapse[2].value}
-                            fontSize={1.15}
-                            fontWeight="bold" />
+                            size={18}
+                            weight={900}
+                        />
                     </Grid>
                     <Grid item container xs={12} sx={{ marginTop: '1.5rem' }} justifyContent="center" alignItems="center">
 

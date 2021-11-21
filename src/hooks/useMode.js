@@ -6,7 +6,6 @@ const useMode = () => {
     const [mode, setMode] = useState(true)
     const toggleMode = () => setMode(!mode)
     const colorBar = mode ? grey[500] : yellow[500]
-    const colorInput = mode ? grey[900] : yellow[50]
     const colorBarHover = mode ? grey[700] : yellow[700]
     const theme = responsiveFontSizes(createTheme({
         palette: {
@@ -60,6 +59,11 @@ const useMode = () => {
                     disableRipple: true
                 }
             },
+            MuiButton: {
+                defaultProps: {
+                    disableRipple: true
+                }
+            }
         },
     }));
 

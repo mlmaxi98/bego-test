@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { useTheme } from '@mui/material';
 
 const CustomTabs = ({
-    elements, initial, fontSize, fontWeight, type }) => {
+    elements, initial, size, weight, type }) => {
 
     const [value, setValue] = useState(initial);
     const handleChange = (_, newValue) => {
@@ -21,7 +21,6 @@ const CustomTabs = ({
                 value={value}
                 onChange={handleChange}
                 textColor="white"
-                indicatorColor="primary"
                 TabIndicatorProps={{
                     style: {
                         width: 30,
@@ -45,15 +44,11 @@ const CustomTabs = ({
                                 label={tab.name}
 
                                 sx={{
-                                    color: value === tab.value && palette.primary.main,
-                                    textTransform: 'none',
-                                    textAlign: 'left',
                                     minWidth: (
                                         tab.value === 'inProgress'
                                         || tab.value === 'completed'
                                     ) && '30%',
-                                    fontSize: fontSize && `${fontSize}rem`,
-                                    fontWeight: fontWeight && fontWeight,
+                                    color: value === tab.value && palette.primary.main,
                                     flexDirection: 'row',
                                     justifyContent: 'flex-start',
                                     marginLeft: (
@@ -61,8 +56,10 @@ const CustomTabs = ({
                                         && tab.value !== 'week'
                                     ) && '2.5%',
                                     marginRight: type === 'graph' && '2.5%',
-                                    fontSize: '14px',
-                                    fontWeight: 900,
+                                    textTransform: 'none',
+                                    textAlign: 'left',
+                                    fontSize: size && `${size}px`,
+                                    fontWeight: weight,
                                     letterSpacing: 0,
                                     lineHeight: '26px',
                                 }}

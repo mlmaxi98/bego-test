@@ -1,11 +1,7 @@
-import { Box, Grid, Typography, SvgIcon } from '@mui/material';
-import { useTheme } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 import { Check, Clock, Flash, Menu, Download, Chevron } from '../icons'
 const Statistics = () => {
 
-
-    const { palette } = useTheme()
-    const { primary } = palette
     const statistics = [
         {
             name: 'Total projects',
@@ -64,12 +60,12 @@ const Statistics = () => {
                             <Grid item xs={9} sx={{ display: 'flex', px: 1 }}
                                 justifyContent="center"
                                 alignItems="center">
-                                <img src={Download} />
+                                <img src={Download} alt='download' />
                             </Grid>
                             <Grid item xs={3} sx={{ display: 'flex', borderLeft: '1px solid #494C50', px: 1 }}
                                 justifyContent="center"
                                 alignItems="center">
-                                <img src={Chevron} />
+                                <img src={Chevron} alt='chevron' />
                             </Grid>
 
                         </Grid>
@@ -112,7 +108,7 @@ const Statistics = () => {
                                 justifyContent="center"
                                 alignItems="center"
                             >
-                                <img src={icon} />
+                                <img src={icon} alt='icon' />
                             </Grid>
                             <Grid
                                 item xs={8}

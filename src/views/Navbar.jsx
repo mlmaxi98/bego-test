@@ -18,7 +18,7 @@ const Navbar = () => {
                     alignItems="center"
                     justifyContent="center">
                     <IconButton color="primary">
-                        <img src={Back} />
+                        <img src={Back} alt='back' />
                     </IconButton>
                 </Grid>
                 <Grid
@@ -41,7 +41,7 @@ const Navbar = () => {
                     alignItems="center"
                     justifyContent="center">
                     <IconButton color="secondary">
-                        <img src={Notification} />
+                        <img src={Notification} alt='notification' />
                     </IconButton>
                 </Grid>
             </Grid>
