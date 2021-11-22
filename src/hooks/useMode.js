@@ -35,14 +35,16 @@ const useMode = () => {
                 lineHeight: '26px',
                 fontWeight: 900,
                 letterSpacing: 0,
-                color: '#FFFFFF'
+                color: '#FFFFFF',
+                paddingRight: 0,
             },
             tabGraph: {
                 fontSize: `18px`,
                 lineHeight: '25px',
                 fontWeight: 900,
                 letterSpacing: 0,
-                color: '#FFFFFF'
+                color: '#FFFFFF',
+                paddingRight: 0,
             },
             money: {
                 fontSize: '45px',

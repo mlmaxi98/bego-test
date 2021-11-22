@@ -52,7 +52,7 @@ const CustomTabs = ({ elements, initial, type }) => {
                                         type === 'graph'
                                         && tab.value !== 'week'
                                     ) && '2.5%',
-                                    marginRight: type === 'graph' && '2.5%',
+                                    marginRight: (type === 'graph' && tab.value === 'month') && '2.5%',
                                     textTransform: 'none',
                                     textAlign: 'left',
                                     ...variant
